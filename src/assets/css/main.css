@@ -1335,7 +1335,12 @@ input[type="search"]::-webkit-search-cancel-button {
 
 .header .header-logo {
   width: auto;
-  height: 58px;
+  height: 6rem;
+}
+
+.header .header-logo-dark {
+  width: auto;
+  height: 6rem;
 }
 
 .header h5 {
@@ -1512,7 +1517,7 @@ input[type="search"]::-webkit-search-cancel-button {
 
 .footer .footer-logo {
   width: auto;
-  height: 43.6px;
+  height: 55px;
 }
 
 .footer h6 {

@@ -435,7 +435,7 @@ const loading = ref(false);
 async function inquireUser() {
   loading.value = true;
   try {
-    await axios.post("http://localhost:5173/api/inquire-user", user);
+    await axios.post("https://shiftmindstech.vercel.app/api/api/inquire", user);
 
     console.log(user);
 

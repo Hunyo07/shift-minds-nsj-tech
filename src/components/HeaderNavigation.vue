@@ -3,79 +3,67 @@
     <div class="container">
       <nav class="navbar navbar-expand-xl py-0">
         <router-link to="/home">
-          <!-- <img
-            src="@/assets/img/sm-logo1-emblem.png"
-            alt="NSJ Technologies Logo"
-            class="header-logo"
-          />
-          <div class="company-name" style="font-size: 24px; letter-spacing: 1px;">ShiftMinds Technology Solutions</div>
-          <div class="slogan" style="font-size: 20px; letter-spacing: 1px;">Shift your minds, transform your business.</div>  -->
-          <!-- <span class="navbar-brand-name">ShiftMinds Technology Solutions</span> -->
-
-         <!--  <span class="navbar-brand-name ms-2" style="font-size: 24px; letter-spacing: 1px;">ShiftMinds Technology Solutions</span>
-          <br>
-          <span class="navbar-brand-name ms-2" style="font-size: 20px; letter-spacing: 1px;">Shift your minds, transform your business.</span> -->
-<!-- 
-          <div class="navbar-brand-name ms-2" style="font-size: 24px; letter-spacing: 1px;">ShiftMinds Technology Solutions</div>
-          
-          <div class="navbar-brand-name ms-2" style="font-size: 20px; letter-spacing: 1px;">Shift your minds, transform your business.</div>  -->
           <div class="d-flex align-items-center">
             <img
+              v-if="!is_theme_dark"
               src="@/assets/img/sm-logo1-emblem.png"
               alt="NSJ Technologies Logo"
               class="header-logo"
-              style="margin-right: 10px;"
+              style="margin-right: 10px"
             />
-          <div class="navbar-brand-text">
-              <div class="company-name" style="font-size: 24px; letter-spacing: 1px;">ShiftMinds Technology Solutions</div>
-              <div class="slogan" style="font-size: 20px; letter-spacing: 1px; color: #333333;">Shift your minds, transform your business.</div>
-            </div>
+            <img
+              v-else
+              src="@/assets/img/nsj-tech-logo-emblem.png"
+              alt="NSJ Technologies Logo -dark"
+              class="header-logo-dark"
+              style="margin-right: 10px"
+            />
+            <!-- <div class="navbar-brand-text">
+              <div
+                class="company-name"
+                style="font-size: 24px; letter-spacing: 1px"
+              >
+                ShiftMinds Technology Solutions
+              </div>
+              <div
+                class="slogan"
+                style="font-size: 20px; letter-spacing: 1px; color: #333333"
+              >
+                Shift your minds, transform your business.
+              </div>
+            </div> -->
           </div>
         </router-link>
-        
+
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <router-link class="nav-link" to="/home" role="button">Home</router-link>
+              <router-link class="nav-link" to="/home" role="button"
+                >Home</router-link
+              >
             </li>
             <li class="nav-item">
-              <router-link class="nav-link" to="/about" role="button">About</router-link>
+              <router-link class="nav-link" to="/about" role="button"
+                >About</router-link
+              >
             </li>
-           <!--  <li class="nav-item dropdown">
+
+            <li class="nav-item dropdown">
               <a
                 class="nav-link"
+                href="#services-overview"
                 @mouseover="is_services_dropdown_active = true"
                 @mouseleave="is_services_dropdown_active = false"
-                href="#"
-                
+                >Services</a
               >
-                Services
-              </a>
-            </li> -->
-            <!-- <li class="nav-item dropdown">
-              <a class="nav-link" 
-              @mouseover="is_services_dropdown_active = true"
-              @mouseleave="is_services_dropdown_active = false"
-              v-bind:to="{ name: 'Home', hash: '#services-overview' }">Services</a>
-            </li> -->
-            <li class="nav-item dropdown">
-              <a class="nav-link" href="#services-overview" 
-                @mouseover="is_services_dropdown_active = true"
-                @mouseleave="is_services_dropdown_active = false">Services</a>
             </li>
 
-         <!--    <li class="nav-item">
-              <router-link class="nav-link" to="/blog" role="button">Blog</router-link>
-            </li> -->
-
-      <!--       <li class="nav-item">
-              <router-link class="nav-link" to="/careers" role="button"
-                >Careers</router-link
-              >
-            </li> -->
-
             <li class="nav-item">
-              <router-link class="nav-link" v-bind:to="{ name: 'Home', hash: '#request-quote' }">Contact</router-link>
+              <router-link
+                class="nav-link"
+                v-bind:to="{ name: 'Home', hash: '#request-quote' }"
+                >Contact</router-link
+              >
             </li>
           </ul>
         </div>
@@ -170,7 +158,9 @@
               </ul>
             </div>
             <div class="col-6 col-md-4 col-lg-3">
-              <div class="text-dark fw-bold mb-3">Cloud Migration & Management</div>
+              <div class="text-dark fw-bold mb-3">
+                Cloud Migration & Management
+              </div>
               <ul>
                 <li><a href="#">Cloud Migration</a></li>
                 <li><a href="#">Cloud Optimization</a></li>
@@ -199,7 +189,9 @@
               </ul>
             </div>
             <div class="col-6 col-md-4 col-lg-3">
-              <div class="text-dark fw-bold mb-3">IT Infrastructure & Network Design</div>
+              <div class="text-dark fw-bold mb-3">
+                IT Infrastructure & Network Design
+              </div>
               <ul>
                 <li><a href="#">Network Design</a></li>
                 <li><a href="#">Server & Storage Design</a></li>
@@ -225,7 +217,9 @@
     ></div>
     <div class="menu shadow bg-white" :class="{ hidden: is_menu_hidden }">
       <div class="sticky-top p-3 p-md-4">
-        <div class="fw-bold d-flex justify-content-between align-items-center mb-0">
+        <div
+          class="fw-bold d-flex justify-content-between align-items-center mb-0"
+        >
           <h5 class="text-dark fw-bold mb-0">Menu</h5>
           <a
             href="#"
@@ -238,8 +232,12 @@
       </div>
       <div class="p-3 p-md-4">
         <div class="d-flex flex-column gap-2">
-          <router-link to="/home" class="btn btn-default btn-lg">Home</router-link>
-          <router-link to="/about" class="btn btn-default btn-lg">About</router-link>
+          <router-link to="/home" class="btn btn-default btn-lg"
+            >Home</router-link
+          >
+          <router-link to="/about" class="btn btn-default btn-lg"
+            >About</router-link
+          >
           <a href="#" class="btn btn-default btn-lg">Services</a>
           <!-- <a href="#" class="btn btn-default btn-lg" @click="scrollToRequestQuoteSection">Contact</a> -->
           <!-- <a href="#" class="btn btn-default btn-lg" @click="goToRequestQuote">Contact</a> -->
@@ -257,7 +255,6 @@
     </div>
   </header>
 </template>
-
 
 <script>
 export default {
@@ -320,23 +317,22 @@ export default {
       const homeComponent = this.$root.$children.find(
         (component) => component.$options.name === "Home"
       );
-      
+
       // Check if the Home.vue component exists
       if (homeComponent) {
         // Scroll to the "request-quote" section
-        const requestQuoteSection = homeComponent.$el.querySelector("#request-quote");
+        const requestQuoteSection =
+          homeComponent.$el.querySelector("#request-quote");
         if (requestQuoteSection) {
           requestQuoteSection.scrollIntoView({ behavior: "smooth" });
         }
       }
     },
     goToRequestQuote() {
-      this.$router.push({ name: 'Home', hash: '#request-quote' });
+      this.$router.push({ name: "Home", hash: "#request-quote" });
     },
   },
-    
 };
-
 </script>
 
 <style scoped>
@@ -351,4 +347,3 @@ export default {
   transform: rotate(90deg);
 }
 </style>
-

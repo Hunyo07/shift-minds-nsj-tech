@@ -4,8 +4,13 @@
       <div class="row g-5">
         <div class="col-lg-6">
           <router-link to="/home" class="d-inline-block mb-4">
+            <!-- <img
+              src="@/assets/img/nsj-tech-logo-emblem.png"
+              alt="NSJ Technologies Logo"
+              class="footer-logo"
+            /> -->
             <img
-              src="@/assets/img/nsj-tech-logo-emblem.webp"
+              src="@/assets/img/nsj-tech-logo-emblem.png"
               alt="NSJ Technologies Logo"
               class="footer-logo"
             />
@@ -43,17 +48,20 @@
           <ul>
             <li>
               <a href="#"
-                >Victoria Towers Tower D, Mother Ignacia corner Timog Avenue, Quezon City, 1103, Metro
-                Manila</a
-              >
+                >7A HAITI COR SOLIVEN ST GREENHEIGHTS SUBDIVISION PHASE 1
+                CONCEPCION UNO MARIKINA CITY
+              </a>
             </li>
-            <li><a href="#">info@shiftminds.com.ph</a></li>
-            <li><a href="#">(02) 1234 5678</a></li>
-            <li><a href="#">+639 123 456 7890</a></li>
+            <li><a href="#">inquiry@shiftminds.com.ph </a></li>
+            <li><a href="#">(02) 8810 8120</a></li>
+            <li><a href="#">+639957634174</a></li>
           </ul>
         </div>
       </div>
-      <div class="my-5" style="height: 1px; border-top: 2px solid #262831"></div>
+      <div
+        class="my-5"
+        style="height: 1px; border-top: 2px solid #262831"
+      ></div>
       <div
         class="d-flex flex-column flex-lg-row justify-content-lg-between align-items-lg-center gap-3 gap-lg-4"
       >
